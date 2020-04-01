@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="./css/main.css" />
   <script src="./js/main.js"></script>
 </head>
-
 <body>
   <div class="container">
     <header class="appHeader">
@@ -17,14 +15,14 @@
       </h1>
       <ul class="memberOnly resetList">
         <li><a href="#">로그인</a></li>
-        <li><span class="divider" aria-hidden="true">|</span><a href="#" g>회원가입</a></li>
-        <li><span class="divider" aria-hidden="true">|</span><a href="#">커뮤니티</a></li>
+        <li><span class="divider" aria-hidden="true">ㅣ</span><a href="#">회원가입</a></li>
+        <li><span class="divider" aria-hidden="true">ㅣ</span><a href="#">커뮤니티</a></li>
       </ul>
       <form action="https://formspree.io/xyyzgpvy" method="POST" class="searchForm" role="search">
         <fieldset class="resetBox">
-          <legend>검색 폼</legend>
-          <label for="search" class="a11y-hidden">검색어</label>
-          <input type="search" id="search" name="search" required placeholder="검색어를 입력하세요">
+          <legend class="a11yHidden">검색 폼</legend>
+          <label for="search" class="a11yHidden">검색어</label>
+          <input type="search" id="search" name="search" required placeholder="검색어를 입력하세요" />
           <button type="submit" class="buttonNone buttonSearch">검색</button>
         </fieldset>
       </form>
@@ -40,5 +38,4 @@
     <footer class="appFooter">푸터</footer>
   </div>
 </body>
-
 </html>

@@ -2,14 +2,39 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
 /* 스타일 초기화 */
-.a11y-hidden,
-legend {
+.a11yHidden{
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.buttonNone{
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+.button{
+  cursor: pointer;
+}
+
+
+.memberOnly li{
+  display: inline-block;
+  line-height: 30px;
+}
+
+[type="search"], .buttonSearch{
+  vertical-align: middle;
+}
+[type="search"]{
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 30px;
+  padding: 2px 5px;
+  margin-right: 5px;
 }
 
 .resetMargin {
@@ -92,6 +117,7 @@ body {
     position: relative;
     background: rgb(56, 46, 42);
     flex-flow: row wrap;
+    padding-bottom: 20px;
   }
 
   /* 모바일 브랜드 */
@@ -102,6 +128,7 @@ body {
 
   /* 모바일 멤버링크 */
   .memberOnly{
+      color: white;
       background-color: rgb(152, 133, 116);
       order: -1;
       text-align: right;  
@@ -113,45 +140,20 @@ body {
 .brand img{
   padding: 10px 0;
 }
-.memberOnly li {
-  display: inline;
-  line-height: 30px;
-}
 
 /* 모바일 검색 */
-.searchForm{
-  padding: 10px 10px;
-  background-color: thistle;
-}
-[type]="search"], .buttonSearch{
-  vertical-align: center;
-}
+
+
 [type="search"]{
-  border: 1px solid #aaa;
-  border-radius: 3px;
-  height: 30px;
-  padding: 2px 5px;
-  width: calc(100% - 40%);
-}
-.buttonNone{
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-}
-.button{
-  cursor: pointer;
+  width: calc(100% - 10%);
 }
 
-.resetBox input {
-  background-color: tomato;
-  width: 80%;
-  height: 30px;
-  border-radius: 5px;
-}
 .buttonSearch{
   position: relative;
   border: none;
   font-size: 0;
+  color: #fff;
+  font-size: 1.2rem;
   height: 30px;
   width: 30px;
 }
@@ -167,9 +169,6 @@ body {
   background-size: 100%;
 }
 
-/* .appHeader {
-      height: 15vh;
-    } */
 .appMain {
   height: 70vh;
 }
@@ -190,9 +189,8 @@ body {
 
 @media screen and (min-width: 1000px) {
 
-  /* 데스크탑 컨테이너 */
+  /* 데스크탑 이바이스 */
   .container {
-    background-color: pink;
     justify-content: center;
   }
 
@@ -206,9 +204,41 @@ body {
     width: 100%;
   }
 
+
+
   .appHeader {
-    height: 10vh;
+    background-color: white;
   }
+  .brand{
+    padding: 10px;
+    float: left;
+  }
+  .memberOnly{
+    background-color: white;
+    text-align: right;
+  } 
+
+  .searchForm{
+    text-align: right;
+    /* background-color: tomato; */
+    padding-right: 50px;
+  }
+  .searchForm input{
+    height: 35px;
+    width: 60%;
+    border-radius: 3px;
+  }
+  .buttonSearch{
+    height: 30px;
+    width: 50px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #988574;
+    color: #fff;
+    padding: 1 1rem;
+  }
+
+
 
   .appNavigation {
     height: 20vh;

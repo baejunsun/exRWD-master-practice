@@ -46,9 +46,9 @@ html {
     .appNavigation {
       display: none;
     }
-    .appHeader {
+    /* .appHeader {
       height: 15vh;
-    }
+    } */
     .appMain {
       height: 70vh;
     }
